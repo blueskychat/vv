@@ -41,6 +41,9 @@ function FindProxyForURL(url, host) {
   if (!isResolvable(host)) {
       return proxy;
   }
+  if(/google/.test(url)){
+	  return proxy;
+  }  
   if(/google/.test(host)){
 	  return proxy;
   }
